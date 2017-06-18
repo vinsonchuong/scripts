@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -o errexit
+set -o pipefail
+
+curl -s https://cache.ruby-lang.org/pub/ruby/index.txt | awk 'END {print $1}'
